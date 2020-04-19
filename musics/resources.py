@@ -7,6 +7,7 @@ class MusicResource(ModelResource):
         queryset = Music.objects.all()
         resource_name = 'music'
         fields = ['name', 'artist']
+        allowed_methods = ['get']
 
 
 music_resource = MusicResource()
