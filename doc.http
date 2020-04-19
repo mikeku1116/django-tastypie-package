@@ -1,2 +1,2 @@
 ### 取得所有音樂清單
-GET http://127.0.0.1:8000/api/music HTTP/1.1
+GET http://127.0.0.1:8000/api/v1/music HTTP/1.1

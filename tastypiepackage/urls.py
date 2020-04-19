@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from musics.resources import music_resource
+from tastypie.api import Api
+
+v1_api = Api(api_name='v1')
+v1_api.register(music_resource)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(music_resource.urls))
+    path('api/', include(v1_api.urls))
 ]
